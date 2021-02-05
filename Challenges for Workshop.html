@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<body onload='myFunction()'>
+  <h1 style="color:floralwhite">Ambarine's Code for Workshop 1</h1>  
+<p id="demo"></p>
+
+<script>
+   
+function myFunction() {
+// Challenge 1 : Take first letters of first 3 words
+//Chanllenge 2: Change last letters of the next 3 words to a number.
+//Challenge 3 : Find repeated in each of the words left.
+
+
+    //Define all variables needed.
+ 
+ 
+    
+  
+
+    var words = "The apples and oranges in the garden of eden are rotten";
+   
+    var challenge1=[]
+    var challenge2=[]
+    var challenge3=[]
+    var wordSeparation = words.split(" "); // Split the sentence into individual words.
+    
+    var i;
+    
+    // Loop to separate each of the word into their respective challenge.
+    for (i=0; i<wordSeparation.length; i++){
+        if (i<3){
+            challenge1.push(wordSeparation[i])}
+       else if (i==3 || i<6){
+           challenge2.push (wordSeparation[i])}
+       else {
+          challenge3.push(wordSeparation[i])}
+            
+    }
+    
+    // Challenge 1 Begins :
+    var j;
+    var firstletter=[]; 
+     for (j = 0; j < challenge1.length; j++) { 
+       
+        firstletter.push (challenge1[j].substr(0,1));
+        
+        
+    }
+    
+    
+    
+    // Challenge 2 Begins : Change last letters of words 4,5,6 to numbers such that A=2 B=3 C=4 D=5 etc
+      var lastletter=[]; // Challenge 2
+      var k;
+      for (k= 0; k< challenge2.length; k++) { 
+      lastletter.push (challenge2[k].substr(challenge2[k].length -1 ,1))
+      }
+      
+    // Separate the alphabets into individal letters.
+      
+      var separation=[];
+      var alphabets="abcdefghijklmnopqrstuvwxyz";
+      var separation =alphabets.split("") 
+        
+    
+    
+
+    //Define variables
+    var n;
+    var number=[];
+    //for loop finds the length of the alphabets array and pushes the number corresponding to each alphabet. Since A is 2 and array start at 0 position. The first number follows formula (0+2) and second number is (1+2) basically (k+1)x2.
+    
+    for (n=0; n<separation.length ; n++){
+    number.push(n+2);
+        
+    }
+    
+    // Compare last letter to the number array
+    var p;
+    var pos=[]
+    var s;
+    var codes=[];
+
+    
+   
+        for (p=0; p<lastletter.length; ++p) {
+            if (p in lastletter) {
+            s = lastletter[p];
+            pos.push(separation.indexOf(s));
+          
+            codes.push (number[pos[p]])
+            }
+            
+        }
+    
+    
+//Challenge 3 : Find if there are any repeated letters in each of the remaining words and they will make up the remaining of the code. For example The door is trapped. The repeated letters are (op)
+ var t;
+ var v;
+ var w;
+ var double=[]
+ for (t=0; t<challenge3.length;++t){
+     for (v=0;v<challenge3[t].length;++v){
+        for (w=v+1; w<challenge3[t].length;++w){
+            if (challenge3[t].charAt(v)==challenge3[t].charAt(w)){
+                double.push (challenge3[t].charAt(v))
+            }
+            
+     
+ }
+     }
+ }
+ 
+ 
+    var Finalcode= firstletter.concat(codes,double)
+    
+
+  // Finally we print every thing we did. from Challenge 1 to challenge 3.
+    var demoP = document.getElementById("demo");
+    demoP.style.color = "blue"
+    demoP.style.fontSize="medium"
+    
+    document.body.style.backgroundColor = "black"
+    demoP.innerHTML = "Separation= " + wordSeparation + "<br>"
+                + "Challenge1= " + challenge1 + "<br>"
+                +  "Challenge2= " + challenge2 + "<br>"
+                 + "Challenge3= " + challenge3 + "<br>"
+                 + "First Letter= " + firstletter + "<br>"
+                  + "Last letter= " + lastletter + "<br>"
+                + "separation= " + separation + "<br>"
+                 + "code= " + codes + "<br>"
+                 + "double= " + double + "<br>"
+                 + "Final code= " + Finalcode + "<br>";
+                
+                   
+    
+                         
+                
+}
+  
+
+
+
+</script>
+
+</body>
+</html>
