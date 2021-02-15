@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
+
+    
 <head>
 <style>
 body {
@@ -15,7 +19,9 @@ h1 {
     h2 {
   color: white;
   text-align: center;
-    font-size: 30px
+font-size: 40px
+        position: absolute;
+    top: 150px;
 }
 
 p {
@@ -49,56 +55,65 @@ input[type=text] {
 }   
     
 #myDIV1 {
-  position:fixed; left:290px; top:300px;color:white; font-size: 180px;
+  position:absolute; left:400px; top:320px;color:white; font-size: 160px;
 }
     
     #myDIV2 {
-  position:fixed; left:550px; top:340px;color:white; font-size: 140px
+  position:absolute; left:620px; top:340px;color:white; font-size: 140px
 }
     #myDIV3 {
-  position:fixed; left:940px; top:300px;color:white; font-size: 180px
+  position:absolute; left:860px; top:340px;color:white; font-size: 140px
 }
+    #myDIV4{
+        position: fixed; left: auto;top:500px;color: aliceblue;font-size: :50px;
+        box-sizing: border-box;
+    border: 2px solid white;
+  border-radius: 2px;
+    }
+
 </style>
-  
+ 
     
     
 </head>
 <body>
+     <img style = "position:absolute; left:20px; top:20px" src=  "https://ambarine11.github.io/Group1/images/logo.png" width="164.88" height="114.88" alt="Demo">
 
 <h1>YOU HAVE BEEN HACKED!!!</h1>
 <h2>ENTER THE CORRECT ANSWER FROM EACH CHALLENGE TO REVEAL THE SECRET CODE</h2>
 
-<input style = "position:fixed; left:20px; top:200px" id="id1" type="text">     
-<input  style = "position:fixed; left:500px; top:200px" id="id2" type="text">
-<input style = "position:fixed; left:1000px; top:200px" id="id3" type="text"> 
+<input style = "position:absolute; left:120px; top:200px" id="id1" type="text">     
+<input  style = "position:absolute; left:600px; top:200px" id="id2" type="text">
+<input style = "position:absolute; left:1100px; top:200px" id="id3" type="text">
     
-<button style = "position:fixed; left:45px; top:270px" onclick="myFunction1()">Submit</button>   
-<button style = "position:fixed; left:525px; top:270px" onclick="myFunction2()">Submit</button>
+<button style = "position:absolute; left:145px; top:270px" onclick="myFunction1()">Submit</button>   
+<button style = "position:absolute; left:625px; top:270px" onclick="myFunction2()">Submit</button>
     
-<button style = "position:fixed; left:1025px; top:270px"onclick="myFunction3()">Submit</button> 
+<button style = "position:absolute; left:1125px; top:270px"onclick="myFunction3()">Submit</button>
     
-<p style = "position:fixed; left:70px; top:160px;color:white" >Challenge 1</p>
-<p style = "position:fixed; left:550px; top:160px;color:white" >Challenge 2</p>
-<p style = "position:fixed; left:1050px; top:160px;color:white" >Challenge 3</p>
+<p style = "position:absolute; left:170px; top:160px;color:white" >Challenge 1</p>
+<p style = "position:absolute; left:650px; top:160px;color:white" >Challenge 2</p>
+<p style = "position:absolute; left:1150px; top:160px;color:white" >Challenge 3</p>
 
-<p style = "position:fixed; left:300px; top:270px;color:white; font-size: 100px" >_ _ _</p>
-<p style = "position:fixed; left:550px; top:270px;color:white; font-size: 100px" >_ _ _ _ _</p>
-<p style = "position:fixed; left:950px; top:270px;color:white; font-size: 100px" >_ _ </p>
+<p style = "position:absolute; left:380px; top:270px;color:white; font-size: 100px" >_ _ _</p>
+<p style = "position:absolute; left:620px; top:270px;color:white; font-size: 100px" >_ _ _</p>
+<p style = "position:absolute; left:860px; top:270px;color:white; font-size: 100px" >_ _ _ _</p>
     
 <p id="demo"></p>
-    <p id="demo2" style = "position:fixed; left:500px; top:500px;color:white; font-size: 100px"></p>
-       <p id="demo3" style = "position:fixed; left:450px; top:550px;color:white; font-size: 70px"></p>
-  
+    <p id="demo2" style = "position:absolute; left:500px; top:500px;color:white; font-size: 100px"></p>
+       <p id="demo3" style = "position:absolute; left:800px; top:550px;color:yellow; font-size: 70px"></p>
+ 
 <div id="myDIV1"></div>
 <div id="myDIV2"></div>
 <div id="myDIV3"></div>
+    <div id="myDIV4"></div>
 
-  <span style = "position:fixed; left:450px; top:550px;color:white; font-size: 50px ; border:10px solid white " id="timer"></span>   
+  <span style = "position:absolute; left:800px; top:550px;color:white; font-size: 50px ; border:10px solid white " id="timer"></span>   
 
 
 <script>
     
-  
+ 
     
     
     
@@ -110,39 +125,39 @@ demop.style.color="white"
 var x1
 function myFunction1() {
 x1 = document.getElementById("id1").value;
-  if (x1!=="taa") {
+  if (x1!=="sla") {
   document.getElementById('id1').style.borderColor = "red";}
   else {
        document.getElementById('id1').style.borderColor = "green";
        document.getElementById('myDIV1').innerHTML=x1 ;}
-} 
+}
   var x2;  
 function myFunction2() {
  x2 = document.getElementById("id2").value;
-  if (x2!=="20156") {
+  if (x2!=="gob") {
      
   document.getElementById('id2').style.borderColor = "red";}
   else {
        document.getElementById('id2').style.borderColor = "green"
       document.getElementById('myDIV2').innerHTML=x2 ;}
-} 
+}
     
  var x3;
     
 function myFunction3() {
  x3 = document.getElementById("id3").value;
-  if (x3!=="et") {
+  if (x3!=="1619") {
      
   document.getElementById('id3').style.borderColor = "red";}
   else {
        document.getElementById('id3').style.borderColor = "green"
       document.getElementById('myDIV3').innerHTML=x3 ;}
-} 
+}
     
     
     
    
-var count=2400;
+var count=3000;
 
 var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
 
@@ -151,23 +166,40 @@ function timer()
   count=count-1;
     var currentMinutes = Math.floor(count/ 60);
     var currentSeconds = count % 60;
-  if (x3=="et") {
-      if (x2="12156") {
-      if (x1== "taa") {
+  if (x3=="1619") {
+      if (x2="gob") {
+      if (x1== "sla") {
    
      clearInterval(counter);
-     document.getElementById("timer").innerHTML= currentMinutes + " mins " + currentSeconds+ " seconds " 
+     document.getElementById("timer").innerHTML= currentMinutes + " mins " + currentSeconds+ " seconds "
           document.getElementById("timer").style.color="#7CFC00"
           document.getElementById("demo3").innerHTML="CONGRATS!!!"
      return;
   }}}
-    if (count==0){document.getElementById("timer").innerHTML= "TIME OVER"
+    else if (count<0){
+        clearInterval(counter);
+        document.getElementById("timer").innerHTML= "TIME OVER"
                  document.getElementById("timer").style.color="red"}
 
-  document.getElementById("timer").innerHTML= currentMinutes + " mins " + currentSeconds+ " seconds " + "Left"
-} 
+ else{ document.getElementById("timer").innerHTML= currentMinutes + " mins " + currentSeconds+ " seconds " + "Left"}
+}
+    
+    document.getElementById("myDIV4").innerHTML = "Rules" + "<br>"+
+        "1.The answers only contain small letters" +"<br>"+
+"2.It is encouraged that everyone participates in the discussion" +"<br>"+
+"3.Facilitator will look over your code to judge whether you complete the challenge" + "<br>"+
+    "4.Answers will only be accepted if you find them by coding" +"<br>"+
+"5.No spamming please.Add comments to your code by using “//” " + "<br>"+
+"6.Coding is compulsory for everyone" + "<br>"+
+        "Else your team will be disqualified after 2 warnings " + "<br>"+
+"7.Complete the challenge in the least amount of time to increase your chance of winning_" +"<br>" 
+
     
     
+ 
+
+    
+ 
 
     
     
